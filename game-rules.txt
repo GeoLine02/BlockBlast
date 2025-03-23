@@ -1,0 +1,19 @@
+Block Blast! Rules (Free Mode)
+Drag and Drop Blocks
+
+Place the given block pieces on the board to create and clear full rows or columns.
+Clear Lines to Score Points
+
+Whenever you complete a row or column, it disappears, earning you points.
+No Rotations
+
+You cannot rotate blocks; you must place them as they appear.
+Limited Space
+
+The game ends when you can no longer place any of the available blocks.
+No Time Limits
+
+In free mode, you can play at your own pace without time restrictions.
+Combo & Streak Bonuses
+
+Clearing multiple lines at once or in consecutive moves grants extra points.

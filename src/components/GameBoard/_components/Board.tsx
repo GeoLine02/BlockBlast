@@ -1,22 +1,32 @@
+import { useDroppable } from "@dnd-kit/core";
+
 interface IBoardProps {
-  board: number[][][];
+  board: number[][];
+  handleDrop: (rowIndex: number, colIndex: number) => void;
 }
 
-const Board = ({ board }: IBoardProps) => {
+const Board = ({ board, handleDrop }: IBoardProps) => {
+  const { setNodeRef } = useDroppable({
+    id: "board",
+  });
+
   return (
-    <div className="flex flex-wrap w-[384px] md:w-[512px] rounded-md">
+    <div className="grid grid-cols-8 border border-gray-400 p-2 rounded">
       {board.map((row, rowIndex) =>
-        row.map((_, colIndex) => (
+        row.map((cell, colIndex) => (
           <div
+            ref={setNodeRef}
             key={`${rowIndex}-${colIndex}`}
-            className="w-12 md:w-16 aspect-square flex items-center justify-center border border-gray-300 bg-gray-200"
-          ></div>
+            onDrop={() => handleDrop(rowIndex, colIndex)}
+            onDragOver={(e) => e.preventDefault()}
+            className={`w-10 h-10 border border-gray-100 ${
+              cell ? "bg-blue-500" : "bg-gray-300"
+            }`}
+          />
         ))
       )}
     </div>
   );
 };
-
-// w-6 md:w-10 lg:w-14
 
 export default Board;

@@ -3,3 +3,14 @@
 .container {
   @apply max-w-[1200px] mx-auto;
 }
+
+@theme {
+  --color-block-yellow: #f2d04d; /* Block accent color */
+  --color-block-red: #e24e4e; /* Warning/Explosion color */
+  --color-background-light: #f4f4f9; /* Light background color */
+  --color-text-primary: #ffffff; /* White text */
+  --color-text-secondary: #b2b2b2; /* Secondary text */
+  --color-border-gray: #dddddd; /* Border for blocks */
+  --color-active-button: #f3a84e; /* Active button color */
+  --color-hover-button: #ff9c3d; /* Hover effect color */
+}
